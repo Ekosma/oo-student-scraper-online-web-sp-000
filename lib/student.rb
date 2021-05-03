@@ -6,9 +6,9 @@ class Student
 
   def initialize(student_hash)
     self.send("name=", student_hash[:name])
+    
+    self.send("location=", student_hash[:location])
     @@all << self
-    @location = student_hash[:location]
-    student_hash = self
   end
 
   def self.create_from_collection(students_array)
